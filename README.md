@@ -1,11 +1,15 @@
 timecode
 ========
 
-Library for working with Timecodes (support drop frames for NTSC)
+Library for working with `Timecodes` (support drop frames for NTSC).
+This library was designed for `AngularJS` but was rethinked and
+now it is not coupled to any of frameworks. Also it can be slightly modified
+with `UMD` to be used in `NodeJS` env.
 
 ## Tests:
 
 `npm install`
+
 `make test`
 
 ### Coverage
@@ -26,15 +30,15 @@ I have commented test that look over all possible timecodes and check if dropfra
 
 ## Instance methods:
 
-- setTimecode(timecode)
-- setFrames(frames)
-- setDTC(DateTimecode)
+- `setTimecode(timecode)`
+- `setFrames(frames)`
+- `setDTC(DateTimecode)`
 
-- formatDate() -- return date in format '2014-03-31'
-- formatTimecode() -- return timecode in format '00:00:00;00'
-- format() -- return DTC in format '2014-03-31 00:00:00;00'
+- `formatDate()` -- return date in format '2014-03-31'
+- `formatTimecode()` -- return timecode in format '00:00:00;00'
+- `format()` -- return DTC in format '2014-03-31 00:00:00;00'
 
-- add(timecode|frames) - you can add some timecode or amount of frames to current DTC, timecode/frames can be negative
-- subtract(timecode|frames) - the same as above but subtract frames
+- `add(timecode|frames)` - you can add some timecode or amount of frames to current DTC, timecode/frames can be negative
+- `subtract(timecode|frames)` - the same as above but subtract frames
 
 `add` and `subtract` methods shift date if time is over 23:59:59;29 or above 00:00:00;00
